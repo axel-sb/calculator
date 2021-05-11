@@ -6,7 +6,7 @@ const deleteButton = document.querySelector('[data-delete]')
 const pointButton = document.querySelector('[data-point]')
 const screen = document.querySelector('[data-screen]')
 const subScreen = document.querySelector('.subscreen')
-subScreen.textContent = ''
+subScreen.textContent = 'Attempting to go where no one has gone before? While still here, you can\'t divide by zero, though'
 let firstOperand = '';
 let secondOperand = '';
 let currentOperation = null
@@ -64,7 +64,11 @@ function setOperation (operator) {
 function evaluate () {
   if (currentOperation === null || shouldResetScreen) return
   if (currentOperation === '÷' && screen.textContent === '0') {
-    subScreen.textContent = "Attempting to go where no one has gone before? Yet, you can't divide by zero!"
+    subScreen.style.visibility = 'visible'
+    setTimeout(function() {
+      subScreen.style.visibility = 'hidden'
+    }, 3000)
+  }
     clear()
     return;
   }
@@ -73,7 +77,7 @@ function evaluate () {
     operate(currentOperation, firstOperand, secondOperand)
   )
   currentOperation = null
-}
+
 
 function roundResult (number) {
   return Math.round(number * 1000) / 1000

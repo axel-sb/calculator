@@ -39,6 +39,7 @@ body {
   height: fit-content;
   text-align: center;
   width: fit-content;
+  visibility: hidden;
 }
 
 .disp-1-container {
@@ -61,7 +62,7 @@ body {
   line-height: 1;
   min-width: fit-content;
   text-align: right;
-  width: 84.3%;
+  width: 90%;
 }
 
 .buttons {
@@ -165,6 +166,11 @@ button:active {
   transition: 0.1s ease;
 }
 
+.show {
+  opacity: 16;
+  transition: 3s ease-in-out
+}
+
 /* ================== TOOLTIP ================== */
 
 .tooltip {
@@ -229,27 +235,27 @@ button:active {
 }
 @media screen and (min-width: 401px) {
   :root {
-    font-size: 20px;
+    font-size: 15px;
   }
   body {
     background-image: url("assets/clouds-lg.webp");
   }
 }
-@media screen and (min-width: 1981px) {
+@media screen and (min-width: 1980px) {
   :root {
     font-family: 'SF Compact', 'Arial Black';
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 2500px) {
   :root {
     font-family: 'SF Compact', 'Arial Black';
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 3840px) {
   :root {
     font-family: 'SF Compact', 'Arial Black';
-    font-size: 100px;
+    font-size: 35px;
   }
 }
