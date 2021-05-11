@@ -6,7 +6,7 @@ const deleteButton = document.querySelector('[data-delete]')
 const pointButton = document.querySelector('[data-point]')
 const screen = document.querySelector('[data-screen]')
 const subScreen = document.querySelector('.subscreen')
-subScreen.textContent = 'Attempting to go where no one has gone before? While still here, you can\'t divide by zero, though'
+subScreen.textContent = 'The final frontier, where no man has gone before: a number divided by zero!'
 let firstOperand = '';
 let secondOperand = '';
 let currentOperation = null
@@ -68,7 +68,7 @@ function evaluate () {
     setTimeout(function() {
       subScreen.style.visibility = 'hidden'
     }, 3000)
-  }
+
     clear()
     return;
   }
@@ -77,7 +77,7 @@ function evaluate () {
     operate(currentOperation, firstOperand, secondOperand)
   )
   currentOperation = null
-
+}
 
 function roundResult (number) {
   return Math.round(number * 1000) / 1000
@@ -132,6 +132,4 @@ function operate (operator, a, b) {
       else return divide(a, b)
     default:
       return null
-  }
-}
-
+  }}
